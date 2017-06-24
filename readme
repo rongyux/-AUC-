@@ -1,0 +1,12 @@
+
+功能：计算点击率模型auc和q值分布。
+
+输入：按照q值排序聚合的ins, 样式：pctr \t show \t clk
+（若turing选择出数据，do-pre-data模块可以处理按q值聚合和排序）
+
+输出：auc和q分布
+
+run cmd:  cat in.dat | python calcu_AUC_Qdistribution.py
+
+
+demo: 二分类auc计算  run_cmd:  python *.py in.dat
