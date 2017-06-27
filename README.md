@@ -20,7 +20,7 @@
 <p>				TPR				FPR
 <p>模型1			90/90＝1			10/10=1
 <p>模型2			70/90=0.78			5/10=0.5
- <／dependency>
+ </dependency>
 
 ## 二 研究现状
 <dependency>
@@ -42,14 +42,14 @@
 <p>3累加所有样本，计算auc
 
 <p>代码见：calcu_auc.py
-<／dependency>
+</dependency>
 ## 三 点击率模型auc计算方法
 <dependency>
 <p>考虑点击率模型的场景的特殊性，横纵坐标分别为noclk和clk，auc采用如下方式计算：
 <p>1按照pctr聚合 sum_show和sum_clk;
 <p>2样本按照pctr排序；
 <p>3依次对每个样本，计算noclk和clk围成对小梯形对面积。
-<／dependency>
+</dependency>
 代码见：calcu_AUC_Qdistribution.py
 
 
