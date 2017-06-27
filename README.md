@@ -2,6 +2,7 @@
 <p>对于不平衡数据或倾斜数据，准确率和召回率不能评价分类器好坏了。AUC是一个不错对选择，但是由于点击率预估模型对特殊场景，AUC对计算又不同于二分类问题中对AUC计算。下面总结了广工算法业界通用 对AUC计算方法。
 
 ## 一 背景
+<dependency>
 <p>				正样本（90） 				负样本（10） 		
 <p>模型1预测		正（90）					正（10）
 <p>模型2预测		正（70）负（20）			正（5）负（5）
@@ -19,9 +20,10 @@
 <p>				TPR				FPR
 <p>模型1			90/90＝1			10/10=1
 <p>模型2			70/90=0.78			5/10=0.5
- 
+ <／dependency>
 
 ## 二 研究现状
+<dependency>
 <p>AUC直观概念，任意取一对正负样本，正样本score大于负样本对概率。 
 <p>计算方法：正样本和负样本pair对，auc＝预估正样本score大于负样本score的pair对数／总的pair对数。
 <p>E.g. 分别计算模型1和2对auc？
@@ -40,13 +42,14 @@
 <p>3累加所有样本，计算auc
 
 <p>代码见：calcu_auc.py
-
+<／dependency>
 ## 三 点击率模型auc计算方法
+<dependency>
 <p>考虑点击率模型的场景的特殊性，横纵坐标分别为noclk和clk，auc采用如下方式计算：
 <p>1按照pctr聚合 sum_show和sum_clk;
 <p>2样本按照pctr排序；
 <p>3依次对每个样本，计算noclk和clk围成对小梯形对面积。
-
+<／dependency>
 代码见：calcu_AUC_Qdistribution.py
 
 
